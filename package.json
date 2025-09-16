@@ -12,11 +12,10 @@
   "lint-staged": {
     "src/**/*.{js,scss,json}": "prettier --write --single-quote"
   },
-  "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
-    }
-  },
+    },
+  
   "dependencies": {
     "express": "^5.1.0",
     "express-handlebars": "^8.0.3",

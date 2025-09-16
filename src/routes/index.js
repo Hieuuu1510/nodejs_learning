@@ -6,10 +6,10 @@ function route(app) {
                 res.render('home'        );
               });
 
-  app.use('/news', newRouter);
+  app.use('/news', newRouter );
 
   app.get('/views', (req, res) => {
-    res.render('view');
+    res.render('view'); 
   });
 
   app.get('/search', (req, res) => {
