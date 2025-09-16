@@ -9,11 +9,22 @@
     "start": "nodemon src/index.js",
     "compile:sass": "sass --watch src/resource/scss:src/public/css"
   },
+  "lint-staged": {
+    "src/**/*.{js,scss,json}": "prettier --write --single-quote 'src/**/*.{js,scss,json}'"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "dependencies": {
     "express": "^5.1.0",
     "express-handlebars": "^8.0.3",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.6",
     "morgan": "^1.10.1",
     "nodemon": "^3.1.10",
+    "prettier": "^3.6.2",
     "sass": "^1.92.1"
   }
 }

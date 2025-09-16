@@ -1,12 +1,11 @@
- class newController {
-
+class newController {
   getAllNews(req, res) {
-    res.render("news");
+    res.render('news');
   }
 
   slugNews(req, res) {
-    res.send("slug");
+    res.send('slug');
   }
- } 
+}
 
- export default new newController();
+export default new newController();
