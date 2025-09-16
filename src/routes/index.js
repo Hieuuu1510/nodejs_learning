@@ -3,7 +3,7 @@ import newRouter from './news.js';
 function route(app) {
   // router
   app.get('/', (req, res) => {
-    res.render('home');
+    res.render('home'        );
   });
 
   app.use('/news', newRouter);

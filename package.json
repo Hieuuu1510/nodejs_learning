@@ -10,7 +10,7 @@
     "compile:sass": "sass --watch src/resource/scss:src/public/css"
   },
   "lint-staged": {
-    "src/**/*.{js,scss,json}": "prettier --write --single-quote 'src/**/*.{js,scss,json}'"
+    "src/**/*.{js,scss,json}": "prettier --write --single-quote"
   },
   "husky": {
     "hooks": {
