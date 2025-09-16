@@ -2,9 +2,9 @@ import newRouter from './news.js';
 
 function route(app) {
   // router
-  app.get('/', (req, res) => {
-    res.render('home'        );
-  });
+              app.get('/', (req, res) => {
+                res.render('home'        );
+              });
 
   app.use('/news', newRouter);
 
