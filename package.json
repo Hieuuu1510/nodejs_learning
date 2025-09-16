@@ -1,0 +1,19 @@
+{
+  "name": "blog_nodejs",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "author": "hieubaoto",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon src/index.js",
+    "compile:sass": "sass --watch src/resource/scss:src/public/css"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "express-handlebars": "^8.0.3",
+    "morgan": "^1.10.1",
+    "nodemon": "^3.1.10",
+    "sass": "^1.92.1"
+  }
+}
