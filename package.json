@@ -7,15 +7,12 @@
   "type": "module",
   "scripts": {
     "start": "nodemon src/index.js",
-    "compile:sass": "sass --watch src/resource/scss:src/public/css"
+    "compile:sass": "sass --watch src/resource/scss:src/public/css",
+    "prepare": "husky install"
   },
   "lint-staged": {
-    "src/**/*.{js,scss,json}": "prettier --write --single-quote"
+    "src/**/*.{js,scss,json}": "prettier --write"
   },
-    "hooks": {
-      "pre-commit": "lint-staged"
-    },
-  
   "dependencies": {
     "express": "^5.1.0",
     "express-handlebars": "^8.0.3",
