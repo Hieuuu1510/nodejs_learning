@@ -3,3 +3,5 @@ node_modules
 src/public/css
 
 .DS_Store
+
+.env

@@ -4,6 +4,14 @@ import path, { dirname } from 'path';
 import { engine } from 'express-handlebars';
 import { fileURLToPath } from 'url';
 import route from './routes/index.js';
+import { connect } from './config/db/index.js';
+import dotenv from 'dotenv';
+import methodOverride from 'method-override';
+
+dotenv.config();
+
+// Connect to DB
+connect();
 
 // Tạo lại __dirname trong ESM
 const __filename = fileURLToPath(import.meta.url);
@@ -14,6 +22,9 @@ const port = 3005;
 
 // static file
 app.use(express.static(path.join(__dirname, 'public')));
+
+// override with the X-HTTP-Method-Override header in the request
+app.use(methodOverride('_method'));
 
 // middleware
 app.use(
@@ -31,13 +42,16 @@ app.engine(
   'hbs',
   engine({
     extname: '.hbs',
+    helpers: {
+      sum: (a, b) => a + b,
+    },
   }),
 );
 app.set('view engine', 'hbs');
-app.set('views', path.join(__dirname, 'resource/views'));
+app.set('views', path.join(__dirname, 'resource', 'views'));
 
 route(app); // router init
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`);
+  console.log(`App listening on port ${port}`);
 });

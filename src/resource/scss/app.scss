@@ -1,4 +1,4 @@
-@use "variables" as *;
+@use 'variables' as *;
 
 h1 {
   color: $red-color;
@@ -6,4 +6,8 @@ h1 {
   &:hover {
     color: $blue-color;
   }
+}
+
+.card-course-item {
+  margin-top: 16px;
 }

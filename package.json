@@ -8,19 +8,25 @@
   "scripts": {
     "start": "nodemon src/index.js",
     "compile:sass": "sass --watch src/resource/scss:src/public/css",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "preinstall": "lint-staged"
   },
   "lint-staged": {
     "src/**/*.{js,scss,json}": "prettier --write"
   },
   "dependencies": {
+    "dotenv": "^17.2.2",
     "express": "^5.1.0",
     "express-handlebars": "^8.0.3",
     "husky": "^9.1.7",
     "lint-staged": "^16.1.6",
+    "method-override": "^3.0.0",
+    "mongoose": "^8.18.1",
+    "mongoose-delete": "^1.0.2",
     "morgan": "^1.10.1",
     "nodemon": "^3.1.10",
     "prettier": "^3.6.2",
-    "sass": "^1.92.1"
+    "sass": "^1.92.1",
+    "slugify": "^1.6.6"
   }
 }
