@@ -5,6 +5,7 @@ const router = Router();
 
 router.post('/store', CourseController.postStore);
 router.get('/create', CourseController.create);
+router.post('/handle-form-actions', CourseController.handleFormActions);
 router.get('/:id/edit', CourseController.edit);
 router.put('/:id', CourseController.updateCourse);
 router.patch('/:id/restore', CourseController.restoreCourse);
