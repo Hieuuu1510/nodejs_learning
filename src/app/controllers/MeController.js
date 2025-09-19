@@ -12,18 +12,10 @@ class MeController {
         })
       })
       .catch(next);
-
-    // Course.find({})
-    //   .then((courses) =>
-    //     res.render('me/stored-courses', {
-    //       courses: mongooseToObjects(courses),
-    //     }),
-    //   )
-    //   .catch(next);
   }
   
   trashCourses(req, res, next) {
-    // findDeleted là hàm của mongoose-delete lấy các bản ghi đã xoá mềm
+    // findDeleted là hàm của mongoose-delete lấy các bản ghi đã xoá mềm - đã lỗi thời-(((
     Course.findWithDeleted({ deleted: true })
       .then((courses) => {
         res.render('me/trash-courses', {

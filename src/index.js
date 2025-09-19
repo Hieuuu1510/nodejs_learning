@@ -7,6 +7,7 @@ import route from './routes/index.js';
 import { connect } from './config/db/index.js';
 import dotenv from 'dotenv';
 import methodOverride from 'method-override';
+import { sortMiddleware } from './app/middleware/SortMiddleware.js';
 
 dotenv.config();
 
@@ -25,6 +26,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // override with the X-HTTP-Method-Override header in the request
 app.use(methodOverride('_method'));
+
+// customer middleware
+app.use(sortMiddleware);
 
 // middleware
 app.use(

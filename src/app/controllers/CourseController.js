@@ -48,9 +48,6 @@ class courseController {
     } catch (error) {
       next(error);
     }
-    // Course.updateOne({ _id: req.params.id }, req.body)
-    //   .then(() => res.redirect('/me/stored-courses'))
-    //   .catch(next);
   };
 
   deleteCourse(req, res, next) {
